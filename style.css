@@ -1,0 +1,296 @@
+* {
+  padding: 0px 8px 0px 8px;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--tekstkleur);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  font-size: 15px;
+  color: rgb(235, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  font-size: 1, 5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav {
+  background-color: whitesmoke;
+}
+
+h1 {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+h2 {
+  color: black;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion {
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+footer img {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+#hamburger {
+  opacity: 0;
+  z-index: 2;
+}
+
+.hamburger_btn {
+  position: fixed;
+  top: 26px;
+  left: 26px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hamburger_btn>span,
+.hamburger_btn>span::before,
+.hamburger_btn>span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #616161;
+  transition-duration: 1s;
+}
+
+.hamburger_btn>span::before {
+  content: '';
+  top: -12px;
+  left: 0;
+}
+
+.hamburger_btn>span::after {
+  content: '';
+  top: 12px;
+  left: 0;
+}
+
+.hamburger_menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 200px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #0cbfd7;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: 1s;
+  z-index: 2;
+
+}
+
+.menu_item {
+  display: block;
+  padding: 12px 24px;
+  color: #f10000;
+  font-family: 'roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+
+.menu_item:hover {
+  background-color: #47c81c;
+}
+
+#hamburger:checked+.hamburger_btn>span {
+  transform: rotate(45deg);
+}
+
+#hamburger:checked+.hamburger_btn>span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#hamburger:checked+.hamburger_btn>span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#hamburger:checked~.hamburger_menu {
+  left: 0 !important;
+}
+
+@media screen and (max-width: 700px) {
+  nav ul {
+      display: none;
+  }
+}
+
+.slider {
+  width: 500px;
+  max-width: 800px;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: 80%;
+  transform: translateY(50%);
+  margin-top: -50px;
+}
+
+.slide {
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* Vorm van de afbeelding: ronde hoeken */
+  filter: grayscale(50%); /* Maak de afbeeldingen zwart-wit */
+  border: 3px solid #ff0000; /* Rode rand om de afbeeldingen */
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 23px;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+#btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+#btn-next {
+  top: 45%;
+  right: 2%;
+}
+
+.search-bar {
+  width: 820px;
+  display: flex;
+  justify-items: center;
+
+}
+
+#zoektekst {
+  width: 250px;
+  border: 3px solid #0f6fef;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #4276bc;
+  display: flex;
+  margin-left: 270px;
+}
+
+#zoektekst:focus {
+  font-size: 1.1rem;
+}
+
+#grid {
+  width: 300px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  margin-left: 250px;
+}
+
+#grid .cell {
+  background: #e2e9eb;
+  border: 1px solid white;
+  padding: 10px;
+  opacity: 50%;
+}

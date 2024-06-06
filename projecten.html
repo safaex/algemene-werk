@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="logo1.jpg" alt="logo" width="50px" /></a></li>
+                <li><a href="projecten.html"> Projecten</a></li>
+                <li><a href="services.html"> Services</a></li>
+                <li><a href="profiel.html"> Profiel</a></li>
+                <li><a href="inloggen.html"> Inloggen</a></li>
+            </ul>
+        </nav>
+    
+    <header>
+        <nav hidden>
+            <input type="checkbox" id="hamburger" hidden/>
+            <label for="hamburger" class="hamburger_btn">
+                <span></span>
+            </label>
+
+            <ul class="hamburger_menu">
+                <li><a href="projecten.html"> Projecten</a></li>
+                <li><a href="services.html"> Services</a></li>
+                <li><a href="profiel.html"> Profiel</a></li>
+                <li><a href="inloggen.html"> Inloggen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="slider">
+        <div class="slide">
+            <img src="https://source.unsplash.com/random?landscape,cars&timestamp=?" alt="" />
+        </div>
+        <div class="slide">
+            <img src="https://source.unsplash.com/random?landscape,night&timestamp=?" alt="" />
+        </div>
+        <div class="slide">
+            <img src="https://source.unsplash.com/random?landscape,city&timestamp=?" alt="" />
+        </div>
+        <button  class="btn" id="btn-next">&#10596;</button>
+        <button  class="btn" id="btn-prev">&#10594;</button>
+    </div>
+    <main>
+        <section>
+            
+                <div class="search-bar">
+                    <input type="text" id="zoektekst" placeholder="Zoek projecten"
+                        onkeyup="zoekproject(document.getElementById('zoektekst').value)" />
+                </div>
+
+                <div id="grid">
+                    <div>
+           
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <img src="mutree.png" alt="footer" />
+    </footer>
+</body>
+
+</html>
